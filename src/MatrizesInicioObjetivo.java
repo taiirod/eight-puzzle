@@ -10,9 +10,9 @@ public class MatrizesInicioObjetivo {
 
     public static MatrizesInicioObjetivo getInicioObjetivo() {
         int[][] inicial = {
-            {8, 5, 1}, //linha 0
-            {0, 6, 7}, //linha 1
-            {2, 4, 3} // linha 2
+            {5, 6, 1}, //linha 0
+            {4, 2, 0}, //linha 1
+            {7, 8, 3} // linha 2
         };
 
         int[][] objetivo = {

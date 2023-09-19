@@ -16,7 +16,7 @@ public class Utils {
         }
 
         System.out.println("Total de nodos visitados: " + solucao.get(0).getNumeroTotalVisitados());
-        System.out.println("Número de passos: " + solucao.size());
+        System.out.println("Número de passos: " + (solucao.size() - 1));
         System.out.println("Tempo de execução: " + executionTimeMillis / 1000 + "s");
     }
 

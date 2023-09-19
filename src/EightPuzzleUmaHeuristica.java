@@ -47,7 +47,6 @@ public class EightPuzzleUmaHeuristica {
                 }
 
                 // Pontuação G é referente a profundidade
-                // Abaixo
                 int tempPontuacaoG = pontuacaoG.get(nodoAtual.toString()) + 1;
 
                 // A verificação abaixo será feita para garantir que não serão criados nodos repetidos na fronteira
