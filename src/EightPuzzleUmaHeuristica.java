@@ -52,7 +52,7 @@ public class EightPuzzleUmaHeuristica {
 
                 // A verificação abaixo será feita para garantir que não serão criados nodos repetidos na fronteira
                 if (!pontuacaoG.containsKey(vizinhosStr) || tempPontuacaoG < pontuacaoG.get(vizinhosStr)) {
-                    nodoOrigem.put(vizinhosStr, nodoAtual.toString() + ", " + nodoAtual.getDirecao());
+                    nodoOrigem.put(vizinhosStr, nodoAtual + ", " + nodoAtual.getDirecao());
                     pontuacaoG.put(vizinhosStr, tempPontuacaoG);
                     int pontuacaoF = tempPontuacaoG + heuristica(vizinho.estado, objetivo);
                     Nodo nodoVizinho = new Nodo(vizinho.estado, tempPontuacaoG, 0, pontuacaoF, vizinho.getDirecao());
@@ -121,5 +121,5 @@ public class EightPuzzleUmaHeuristica {
         return vizinhos;
     }
 
-    
+
 }

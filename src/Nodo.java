@@ -3,10 +3,10 @@ import java.util.Arrays;
 public class Nodo implements Comparable<Nodo> {
 
     protected int[][] estado;
-    private Integer numeroTotalVisitados;
-    private int pontuacaoG; //Função de Custo Real (g(n))
-    private int pontuacaoF; //Função de Custo Total (f(n))
-    private String direcao;
+    private final Integer numeroTotalVisitados;
+    private final int pontuacaoG; //Função de Custo Real (g(n))
+    private final int pontuacaoF; //Função de Custo Total (f(n))
+    private final String direcao;
 
     public Nodo(int[][] estado, Integer numeroTotalVisitados, int pontuacaoG, int pontuacaoF, String direcao) {
         this.estado = estado;

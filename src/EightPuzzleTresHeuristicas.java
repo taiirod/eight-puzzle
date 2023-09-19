@@ -52,12 +52,12 @@ public class EightPuzzleTresHeuristicas {
 
                 // A verificação abaixo será feita para garantir que não serão criados nodos repetidos na fronteira
                 if (!pontuacaoG.containsKey(vizinhosStr) || tempPontuacaoG < pontuacaoG.get(vizinhosStr)) {
-                    nodoOrigem.put(vizinhosStr, nodoAtual.toString() + ", " + nodoAtual.getDirecao());
+                    nodoOrigem.put(vizinhosStr, nodoAtual + ", " + nodoAtual.getDirecao());
                     pontuacaoG.put(vizinhosStr, tempPontuacaoG);
                     int pontuacaoF = tempPontuacaoG +
-                            heuristicaPecasForaDoLugar(vizinho.estado, objetivo) +
-                            heuristicaDistanciaManhattan(vizinho.estado, objetivo) +
-                            heuristicaInversoes(vizinho.estado, objetivo);
+                        heuristicaPecasForaDoLugar(vizinho.estado, objetivo) +
+                        heuristicaDistanciaManhattan(vizinho.estado, objetivo) +
+                        heuristicaInversoes(vizinho.estado, objetivo);
                     Nodo nodoVizinho = new Nodo(vizinho.estado, 0, tempPontuacaoG, pontuacaoF, vizinho.getDirecao());
                     listaAbertos.add(nodoVizinho);
                 }
